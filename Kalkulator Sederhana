@@ -1,0 +1,59 @@
+# Program-C_TLS21
+Nama: In'am Nurul Fuady, Kelompok: Rust
+
+#include <iostream>
+#include<conio.h>
+#include<math.h>
+#include<stdlib.h>
+using namespace std;
+int main(){
+ 
+ int a,b,i;
+ char aritmatika;
+ cout<<"=====================================================\n";
+ cout<<" Selamat Datang Di Program Kalkulator Sederhana \n \n";
+ cout<<"=====================================================\n"; 
+ cout<<"Masukkan Nilai Pertama = ";
+ cin>>a;
+
+ for (i = 0; i < 10; i++)
+ {
+ cout<<"(Penjumlahan) ==> +\n(Pengurangan) ==> -\n(Pembagian) ==> /\n(Perkalian) ==> *\n(Modulo) ==> %\n(Kuadrat) ==> ^\n(stop) ==> s\nMasukan Operator =";
+ cin>>aritmatika;
+ 
+ cout<<"Masukkan Nilai untuk mengoperasi hasil (masukkan sembarang nilai jika memilih's') = ";
+ cin>>b;
+
+ cout<<"\n Hasil Perhitungan ";
+ cout<< a << aritmatika << b;
+ 
+ if (aritmatika == '+'){
+ a = a + b;
+ } else if (aritmatika == '-'){
+ a = a - b;
+ } else if (aritmatika == '/'){
+ a = a / b;
+ } else if (aritmatika == '*'){
+ a = a * b;
+ } else if (aritmatika == '%'){
+ a = a % b;
+ } else if (aritmatika == '^'){
+ a = pow(a,b);
+ } else if (aritmatika == 'c'){
+ system("cls");
+ continue;
+ } else if (aritmatika=='s'){
+     break;
+     continue;
+ }else {
+ cout<<"operator anda salah"<<endl;
+ }
+
+ 
+ cout<<"\n=====================================================\n";
+ cout <<" = "<<a<<endl;
+ cout<<"\n=====================================================\n";
+ }
+ cin.get();
+ return 0;
+}
